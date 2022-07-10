@@ -1,0 +1,52 @@
+* {
+    background-color: aliceblue;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#table, th, td {
+    border:1px solid black;
+    border-color: black;
+    background-color: lightblue;
+}
+
+#th, td {
+    padding: 15px;
+}
+
+.pgroup {
+    border: 2px solid red;
+}
+
+#quote1 {
+    color: hotpink;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#quote2 {
+    color: pink;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#quote3 {
+    color: lightpink;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navigation {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+img {
+    width: 500px;
+}
+
+#fma, #mha, #jjk{
+    float: left;
+    padding: 5px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
