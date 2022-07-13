@@ -1,0 +1,85 @@
+body {
+    background-color: #fde3ff;
+    background-attachment: fixed;
+}
+
+.leftLogo img, .rightLogo img{
+    width: 70px;
+}
+
+.header h1 {
+    text-align: justify;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    font-size: 50px;
+    top: -18px;
+}
+
+.header {
+    margin: 0% 40% 0% 40%;
+    display: flex;
+    position: relative;
+    border-bottom: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    left: 50px;
+}
+
+hr {
+    position: relative;
+    border: solid;
+    border-top: 50px;
+    margin-top: -40px;
+}
+
+.subHeader img {
+    border: solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.activities img {
+    width: 40%;
+    border: solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.topNav li, .footer li{
+    float:left;
+}
+
+.topNav ul, .footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topNav li a, .footer li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topNav li a:hover, .footer li a:hover {
+    background-color: #111;
+}
+
+.footer nav {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
