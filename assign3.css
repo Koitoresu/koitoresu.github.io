@@ -1,0 +1,47 @@
+body {
+    background-image: url('images\\photo-1528164344705-47542687000d.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.clockBack img{
+    width: 25%;
+    margin-left: 1%;
+}
+
+.handHours img{
+    width: 7%;
+    position: relative;
+    /* opacity: 0; */
+    top: -450px;
+    left: 10%;
+}
+
+.handSeconds img {
+    transform-origin: center;
+    width: 13%;
+    position: relative;
+    top: -580px;
+    left: 7%;
+}
+
+.transBox {
+    bottom: 10%;
+    right: 10px;
+    position: absolute;
+    background-color: rgba(0, 3, 0, 0.5);
+    text-align: center;
+    font-size: medium;
+}
+
+@keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.handSeconds img{
+    animation: rotate 43200s infinite linear;
+    animation-duration: 5s;
+  }
+  
