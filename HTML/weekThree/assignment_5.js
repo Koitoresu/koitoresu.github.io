@@ -63,32 +63,3 @@ function convertTempFtoC(x) {
     fahrenheit = x;
     return ((fahrenheit-32) * 5/9)
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// peterBMI = calcBMI(78, 1.69)
-// lucasBMI = calcBMI(92, 1.95)
-// if (peterBMI > lucasBMI) {
-//     higherBMI = peterBMI;
-// } else {
-//     higherBMI = lucasBMI;
-// }
-
-// console.log(peterBMI)
-// console.log(lucasBMI)
-// console.log(`Lucas BMI${lucasBMI} is ${(lucasBMI > peterBMI) ? higher : lower} than Peter's ${peterBMI}`)

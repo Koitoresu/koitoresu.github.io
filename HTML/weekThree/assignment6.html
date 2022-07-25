@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+    <link rel="stylesheet" href="assignment6.css">
+</head>
+<body>
+    <h1>Assignment 6</h1>
+    <hr> 
+    <h3 >Task 1</h3>
+        <p class="task1"></p>
+    <hr>
+    <h3>Task 2</h3>
+        <label>Please enter temperature in Celsius between -88 and 58:</label><br>
+        <input type="text" id="c" placeholder="69"/>
+        <button type="button"  id="submit" onclick="on_click();">Convert</button>
+        <p class="task2"></p>
+          
+    <hr>
+    <h3>Task 3</h3>
+    <div class="task3-container">
+        <button type="button"  class="task3-button" id="open1">Modal 1</button>
+        <button type="button"  class="task3-button" id="open2">Modal 2</button>
+        <button type="button"  class="task3-button" id="open3">Modal 3</button>
+    </div>
+
+    <div class="modal-container" id='modalContainer1'>
+        <div class="bird-container">
+            <img class='birdimg' src="images\bird.gif" alt="bird">
+        </div>
+        <div class='modal'>
+            <h1>Modal Window 1</h1>
+            <p>Text Box 1</p>
+        <button type="button" class="task3-button" id='close1'>Close</button>
+        </div>
+    </div>
+ 
+    <div class="modal-container" id='modalContainer2'>
+        <div class="bird-container">
+            <img class='birdimg' src="images\bird.gif" alt="birdy">
+        </div>
+        <div class='modal'>
+            <h1>Modal Window 2</h1>
+            <p>Text box Two</p>
+        <button type="button" class="task3-button" id='close2'>Close</button>
+        </div>
+    </div>
+
+    <div class="modal-container" id='modalContainer3'>
+        <div class="bird-container">
+            <img class='birdimg' src="images\bird.gif" alt="flying bird">
+        </div>
+        <div class='modal'>
+            <h1>Modal Window 3</h1>
+            <p>Text Box 3</p>
+        <button type="button" class="task3-button" id='close3'>Close</button>
+        </div>
+    </div>
+
+     <script src="assignment6.js"></script>
+</body>
+</html>
