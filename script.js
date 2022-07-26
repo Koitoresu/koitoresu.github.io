@@ -46,15 +46,8 @@ hscore_track.innerHTML=(`High Score: ${highscore}`)
 var guessArray=[]
 var guesses=document.getElementById('guesses');
 
-
-
-
 /* Get the check button*/
-
 var check = document.getElementById('check');
-
-
-
 check.addEventListener('click',() => {
     /* get the value of the input*/
     const user_input = document.getElementById('userInput').value;
@@ -64,14 +57,6 @@ check.addEventListener('click',() => {
     /*If duplicate*/
     const tofindDuplicates = guessArray => guessArray.filter((item,index) => guessArray.indexOf(item)!=index )
     const duplicateElements = tofindDuplicates(guessArray);
-     
- 
-  
-
-
-
-    
-    
 
     /*Catch user input going wrong */
     try { 
@@ -79,23 +64,19 @@ check.addEventListener('click',() => {
         if(isNaN(user_input)) throw "not a number";
         if(user_input<1) throw "please use a number between 1 and 100";
         if(user_input>100) throw "please use a number between 1 and 100";
-      
       }
-       
-       
-            catch(err) {
-     
-                game_msg.innerHTML = err;
+
+     catch(err) {
+          game_msg.innerHTML = err;
+          stat_img.src='images/wrong.png';
+          document.getElementById("userInput").value = "";
+         if(duplicateElements.length!=0){
+        game_msg.innerHTML = `You guessed this number! Please try a different one.`;
+        guessArray.pop();
+        }
          
-                stat_img.src='images/wrong.png';
-                document.getElementById("userInput").value = "";
-          }
+     }
 
-
-
-        score_track.innerHTML=(`Score: ${score}`)
-        tries.innerHTML=(`Attempt: ${attempt}`)
-      
       /*If guessed low */
       if(user_input<winningNumber && user_input>0){
         document.getElementById("userInput").value = "";
@@ -106,13 +87,13 @@ check.addEventListener('click',() => {
         }
         if(duplicateElements.length==0){
             attempt=attempt-1;}
-        highscore=score;
-        stat_img.src='images/wrong.png';
-        score=0;
-        hscore_track.innerHTML=(`High Score: ${highscore}`)
-        score_track.innerHTML=(`Score: ${score}`)
-        tries.innerHTML=(`Attempt: ${attempt}`)
-        stat_img.src='images/wrong.png';
+            highscore=score;
+            document.getElementById("game-window").style.backgroundColor = 'lightsalmon';
+            score=0;
+            hscore_track.innerHTML=(`High Score: ${highscore}`)
+            score_track.innerHTML=(`Score: ${score}`)
+            tries.innerHTML=(`Attempt: ${attempt}`)
+            stat_img.src='images/wrong.png';
       }
       /*If guessed high */
       if(user_input > winningNumber && user_input<101){
@@ -124,13 +105,9 @@ check.addEventListener('click',() => {
             guessArray.pop();
         }
         if(duplicateElements.length==0){
-            attempt=attempt-1;}
-        
-
-
-
+            attempt=attempt-1;
+        }
         highscore=score;
-        stat_img.src='images/wrong.png';
         document.getElementById("game-window").style.backgroundColor = 'lightsalmon';
         score=0;
         hscore_track.innerHTML=(`High Score: ${highscore}`)
@@ -138,13 +115,12 @@ check.addEventListener('click',() => {
         tries.innerHTML=(`Attempt: ${attempt}`)
         stat_img.src='images/wrong.png';
       }
-    /*If guessed right */
-      if(user_input==winningNumber){
+        /*If guessed right */
+     if(user_input==winningNumber){
         guessArray=[];
         document.getElementById("userInput").value = "";
         game_msg.innerHTML = `You guessed it! My number was ${winningNumber}`;
         score=score+1;
-
         document.getElementById("game-window").style.backgroundColor = 'lightgreen';
         score_track.innerHTML=(`Score: ${score}`)
         hscore_track.innerHTML=(`High Score: ${highscore}`)
@@ -154,8 +130,6 @@ check.addEventListener('click',() => {
         /*check the new winning number */
         console.log(winningNumber);
       }
-
-
 
      /*gameover */
     if(attempt==0){
@@ -170,8 +144,6 @@ check.addEventListener('click',() => {
             document.getElementById('userInput').disabled=true;
         }
     });
-
-
 
     /*The reset button */
     const reset = document.getElementById('reset');
