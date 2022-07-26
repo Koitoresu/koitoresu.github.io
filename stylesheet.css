@@ -150,7 +150,7 @@ body {
     margin: 5% 5% 5% 5%;
     font-size: 14px;
 }
-.task-button:hover,.task3-button:focus {
+.task-button:hover,.task-button:focus,.check-button:hover,.check-button:focus,.reset-button:hover,.reset-button:focus {
     color:rgba(136, 4, 136, 0.725);
     text-decoration:none;
     cursor:pointer;
