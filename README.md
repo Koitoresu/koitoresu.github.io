@@ -1,4 +1,4 @@
-# koitoresu.github.io
+# Guess The Number
 Welcome to our attempt at Project Three! 
 
 The purpose of project 3 is to apply the knowledge of HTML, CSS, JavaScript, & DOM to create a simple game application! 
